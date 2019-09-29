@@ -1,0 +1,33 @@
+package com.lijie;
+
+public class Main {
+	/* 斐波那鍥数(下一个数是前两个数相加的结果, 公式: n = (n - 1) + (n - 2), n 代表序列,并非数值 )
+	 * 0,1,1,2,3,5,8,13,21,...
+	 */
+	
+	//解法一: 递归解法, 
+	public static int fib(int n) {
+		if (n <= 1) {  ///当n 为 0 或者 1 的时候  n-1 和 n-2 一直是 0 ,造成死循环, 所以  n 为 0 或者 1 直接返回,只有n-1 和 n-2 都存在的时候再一直递归
+			return n;
+		}
+		return fib(n - 1) + fib(n - 2);
+	}
+	
+	public static void fibTest() {
+		System.out.println(fib(0));
+		System.out.println(fib(1));
+		System.out.println(fib(2));
+		System.out.println(fib(3));
+		System.out.println(fib(4));
+		System.out.println(fib(5));
+		System.out.println(fib(6));
+		System.out.println(fib(7));		
+		System.out.println(fib(8));		
+	}
+	
+	//入口函数
+	public static void main(String[] args) {
+	fibTest();
+	}
+	
+}

@@ -1,0 +1,15 @@
+package com.lijie;
+
+public class Main {
+	//入口函数
+	public static void main(String[] args) {
+	}
+	
+	/* 斐波那鍥数(下一个数是前两个数相加的结果, 公式: n = (n - 1) + (n - 2), n 代表序列,并非数值 )
+	 * 0,1,1,2,3,5,8,13,21,...
+	 */
+	public static int fib(int n) {
+		return fib(n-1) fib(n-2);
+	}
+
+}
